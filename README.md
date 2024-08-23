@@ -27,6 +27,10 @@ To replace the existing model with your own:
    - Navigate to the `assets` directory in the project.
    - Replace `landmarks.tflite` with your own `.tflite` model file.
    - Update the label file if necessary to match the classes your model predicts.
+   - > **Note**: Some users might encounter an issue in Android Studio where they are unable to paste the TFLite model  
+   > directly into the project. If this happens, manually navigate to the project folder on your system:  
+   > `SpotSight -> app -> src -> main -> assets`, and paste your `.tflite` model file there.
+
 
 3. **Modify the Code if Needed**:
    - Open `TfLiteLandmarkClassifier.kt`.
