@@ -36,3 +36,16 @@ To replace the existing model with your own:
    - Open `TfLiteLandmarkClassifier.kt`.
    - Update the image processing pipeline if your model's input size differs from the default.
    - Adjust any post-processing steps to align with your model's output format.
+     
+### Customizing Image Dimensions
+
+If your TFLite model requires different input dimensions, you can easily adjust the image dimensions used for classification:
+
+1. Open the `ImageDimens` object in the `data` package.
+2. Set the `width` and `height` properties to the required dimensions for your model.
+
+```kotlin
+object ImageDimens {
+    var width: Int = 224 // Set your desired width
+    var height: Int = 224 // Set your desired height
+}
