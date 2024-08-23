@@ -2,6 +2,13 @@
 
 **SpotSight** is an Android application that uses an onboard TensorFlow Lite (TFLite) model to perform image classification. This repository is designed to be flexible, allowing users to easily replace the default TFLite model with their own custom classification model.
 
+### Converting Your Model to TensorFlow Lite
+
+If you have a model that you want to use in this app, you'll need to convert it to the TensorFlow Lite format. You can follow the official guide provided by Google to convert your model:
+
+- Visit [TensorFlow Lite Model Conversion Guide](https://ai.google.dev/edge/lite) to learn how to convert your existing machine learning models into the `.tflite` format compatible with this application.
+
+
 ## Features
 
 - Easy integration with custom TFLite models.
