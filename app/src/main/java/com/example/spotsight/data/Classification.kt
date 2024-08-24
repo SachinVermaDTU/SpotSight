@@ -1,4 +1,4 @@
-package com.example.spotsight.domain
+package com.example.spotsight.data
 
 data class Classification(
     val name: String,

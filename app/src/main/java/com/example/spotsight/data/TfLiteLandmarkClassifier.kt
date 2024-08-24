@@ -3,7 +3,6 @@ package com.example.spotsight.data
 import android.content.Context
 import android.graphics.Bitmap
 import android.view.Surface
-import com.example.spotsight.domain.Classification
 import com.example.spotsight.domain.LandmarkClassifier
 
 import org.tensorflow.lite.support.image.ImageProcessor

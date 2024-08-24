@@ -3,7 +3,9 @@ package com.example.spotsight.presentation
 
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
-import com.example.spotsight.domain.Classification
+import com.example.spotsight.data.Classification
+import com.example.spotsight.data.FrameDimens
+import com.example.spotsight.data.ImageDimens
 import com.example.spotsight.domain.LandmarkClassifier
 
 class LandmarkImageAnalyzer(
@@ -14,11 +16,11 @@ class LandmarkImageAnalyzer(
     private var frameSkipCounter = 0
 
     override fun analyze(image: ImageProxy) {
-        if(frameSkipCounter % 60 == 0) {
+        if(frameSkipCounter % FrameDimens.framesPerSecond == 0) {
             val rotationDegrees = image.imageInfo.rotationDegrees
             val bitmap = image
                 .toBitmap()
-                .centerCrop(321, 321)
+                .centerCrop(ImageDimens.width, ImageDimens.height)
 
             val results = classifier.classify(bitmap, rotationDegrees)
             onResults(results)
